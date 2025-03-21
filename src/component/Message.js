@@ -1,3 +1,4 @@
+import CommentsList from './CommentsList';
 import CurrentTime from './CurrentTime';
 import './Message.css';
 function Message(props) {
@@ -5,6 +6,7 @@ function Message(props) {
         <div className="Message">
             <h2>{props.text}</h2>
             <CurrentTime />
+            <CommentsList />
         </div>
      );
 }
