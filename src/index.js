@@ -4,14 +4,20 @@ import './index.css';
 import App from './component/App.jsx';
 import reportWebVitals from './reportWebVitals';
 import Message from './component/Message';
+import { store } from './component/store.js';
+import { Provider } from 'react-redux';
+import ToggleApp from './component/ToggleApp.jsx';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App/>
-    {/* <App /> */}
-    <Message text="Начинаем работать с React"/>
-  </React.StrictMode>
+    <Provider store={store}>
+      <ToggleApp />
+    </Provider>
+    {/* <App/>
+    <App />
+    <Message text="Начинаем работать с React"/> */}
+    </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
