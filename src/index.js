@@ -4,15 +4,17 @@ import './index.css';
 import App from './component/App.jsx';
 import reportWebVitals from './reportWebVitals';
 import Message from './component/Message';
-import { store } from './component/store.js';
+import { store } from './store/store.js';
 import { Provider } from 'react-redux';
 import ToggleApp from './component/ToggleApp.jsx';
+import ProductList from './component/ProductList.jsx';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <ToggleApp />
+      {/* <ToggleApp /> */}
+      <ProductList />
     </Provider>
     {/* <App/>
     <App />
